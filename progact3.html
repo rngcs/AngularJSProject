@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<style>
+
+input[type="text"] {  
+  										display: block;
+             margin : 0;
+        }
+input[type="number"]{
+  											display: block;
+             margin:0;  
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body> 
+  
+<div ng-app="myApp" ng-controller="myCtrl">
+
+  <h2>PERSONAL INFORMATION</h2> 
+  
+  First Name:   <input type="text" class="a" ng-model="firstName"><br>
+  Middle Name: <input type="text" ng-model="middleName"><br>
+  Last Name:    <input type="text" ng-model="lastName"><br>
+  
+  <h2>EDUCATIONAL INFORMATION</h2>
+  
+Strand:          <input type="text" ng-model="strand"><br>
+Grade Level:  <input type="text" ng-model="glevel"><br>
+School:          <input type="text" ng-model="school">
+
+  <h2>GRADES IN SUBJECT</h2>
+  
+  Math:     <input type="number" ng-model="math"><br>
+  Science: <input type="number" ng-model="science"><br>
+  Fiilipino: <input type="number" ng-model="filipino"><br>
+  English: <input type="number" ng-model="english"><br>
+  TLE:       <input type="number" ng-model="tle"><br>
+  Grade: &nbsp &nbsp &nbsp &nbsp<select ng-model="selectedName" ng-options="x for x in names">
+</select><br><br>
+  Remarks:&nbsp &nbsp <select ng-model="remarks" ng-options="x for x in names">
+</select>
+
+  
+  
+  
+<br>
+<br>
+  <h2>Personal Information</h2>
+  <b>Your name is:</b> <i>{{firstName + " " + middleName + " " + lastName}}</i>
+<br>
+<br>
+  <h2>Educational Information</h2>
+  <b>Your Strand, Grade Level and School are:</b> <i>{{strand +" "+ glevel +" "+ school}}</i>
+  <br>
+  <br>
+    <h2>Grades in Subject</h2>
+  <b>Math:</b>      <i>{{math}}</i><br>
+  <b>Science:</b>  <i>{{science}}</i>      <br>
+  <b>Filipino:</b>   <i>{{filipino}}</i>       <br>
+  <b>English:</b>   <i>{{english}}</i>      <br>
+  <b>TLE:</b>         <i>{{tle}}      </i>       <br>
+  <b>Grade:</b>     <i>{{selectedName}}</i><br>
+  <b>Your Grades are:</b> <i>{{math +" "+ science +" "+ filipino +" "+ english +" " +tle}}</i><br>
+  <b>Overall Grades:</b> <i>{{(math + science + filipino + english + tle)/5 }}</i><br>
+  <b>Remarks:</b><i>{{remarks}}</i>
+   
+  </div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+$scope.firstName= "";
+$scope.middleName="";
+$scope.lastName= "";
+$scope.strand="";
+$scope.glevel="";
+$scope.school="";
+$scope.math="";
+$scope.science="";
+$scope.filipino="";
+$scope.english="";
+$scope.tle="";
+ $scope.names = ["PASSED", "FAILED"]; 
+  $scope.names = ["PASSED","FAILED"];
+  
+});
+</script>
+  
+</body>
+</html>
