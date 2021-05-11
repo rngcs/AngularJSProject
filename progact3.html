@@ -16,7 +16,7 @@ input[type="number"]{
 <body> 
   
 <div ng-app="myApp" ng-controller="myCtrl">
-
+  <h2>1st STUDENT</h2>
   <h2>PERSONAL INFORMATION</h2> 
   
   First Name:   <input type="text" class="a" ng-model="firstName"><br>
@@ -41,19 +41,71 @@ School:          <input type="text" ng-model="school">
   Remarks:&nbsp &nbsp <select ng-model="remarks" ng-options="x for x in names">
 </select>
 
+   <h2>2nd STUDENT</h2>
+  <h2>PERSONAL INFORMATION</h2> 
+  
+  First Name:   <input type="text" class="a" ng-model="fName"><br>
+  Middle Name: <input type="text" ng-model="mName"><br>
+  Last Name:    <input type="text" ng-model="lName"><br>
+  
+  <h2>EDUCATIONAL INFORMATION</h2>
+  
+Strand:          <input type="text" ng-model="str"><br>
+Grade Level:  <input type="text" ng-model="gradelevel"><br>
+School:          <input type="text" ng-model="sch">
+
+  <h2>GRADES IN SUBJECT</h2>
+  
+  Math:     <input type="number" ng-model="Math"><br>
+  Science: <input type="number" ng-model="Science"><br>
+  Fiilipino: <input type="number" ng-model="Filipino"><br>
+  English: <input type="number" ng-model="English"><br>
+  TLE:       <input type="number" ng-model="Tle"><br>
+  Grade: &nbsp &nbsp &nbsp &nbsp<select ng-model="selectedName" ng-options="x for x in names">
+</select><br><br>
+  Remarks:&nbsp &nbsp <select ng-model="remark" ng-options="x for x in names">
+</select>
+
+     </ 3rd student -->
+  <h2>3rd STUDENT</h2>
+  <h2>PERSONAL INFORMATION</h2> 
+  
+  First Name:   <input type="text" class="a" ng-model="fname"><br>
+  Middle Name: <input type="text" ng-model="mname"><br>
+  Last Name:    <input type="text" ng-model="lname"><br>
+  
+  <h2>EDUCATIONAL INFORMATION</h2>
+  
+Strand:          <input type="text" ng-model="s"><br>
+Grade Level:  <input type="text" ng-model="gl"><br>
+School:          <input type="text" ng-model="sc">
+
+  <h2>GRADES IN SUBJECT</h2>
+  
+  Math:     <input type="number" ng-model="MAth"><br>
+  Science: <input type="number" ng-model="SCience"><br>
+  Fiilipino: <input type="number" ng-model="FIlipino"><br>
+  English: <input type="number" ng-model="ENglish"><br>
+  TLE:       <input type="number" ng-model="TLe"><br>
+  Grade: &nbsp &nbsp &nbsp &nbsp<select ng-model="selectedName" ng-options="x for x in names">
+</select><br><br>
+  Remarks:&nbsp &nbsp <select ng-model="remarkss" ng-options="x for x in names">
+</select>
+  
   
   
   
 <br>
 <br>
+  <h2>1st Student Output</h2>
   <h2>Personal Information</h2>
   <b>Your name is:</b> <i>{{firstName + " " + middleName + " " + lastName}}</i>
 <br>
-<br>
+
   <h2>Educational Information</h2>
   <b>Your Strand, Grade Level and School are:</b> <i>{{strand +" "+ glevel +" "+ school}}</i>
   <br>
-  <br>
+  
     <h2>Grades in Subject</h2>
   <b>Math:</b>      <i>{{math}}</i><br>
   <b>Science:</b>  <i>{{science}}</i>      <br>
@@ -65,24 +117,79 @@ School:          <input type="text" ng-model="school">
   <b>Overall Grades:</b> <i>{{(math + science + filipino + english + tle)/5 }}</i><br>
   <b>Remarks:</b><i>{{remarks}}</i>
    
+ 
+<br>
+<br>
+  <h2>2nd Student Output</h2>
+  <h2>Personal Information</h2>
+  <b>Your name is:</b> <i>{{fName + " " + mName + " " + lName}}</i>
+<br>
+  <h2>Educational Information</h2>
+  <b>Your Strand, Grade Level and School are:</b> <i>{{str +" "+ gradelevel +" "+ sch}}</i>
+  <br>
+    <h2>Grades in Subject</h2>
+  <b>Math:</b>      <i>{{Math}}</i><br>
+  <b>Science:</b>  <i>{{Science}}</i>      <br>
+  <b>Filipino:</b>   <i>{{Filipino}}</i>       <br>
+  <b>English:</b>   <i>{{English}}</i>      <br>
+  <b>TLE:</b>         <i>{{Tle}}      </i>       <br>
+  <b>Grade:</b>     <i>{{selectedName}}</i><br>
+  <b>Your Grades are:</b> <i>{{Math +" "+ Science +" "+ Filipino +" "+ English +" " +Tle}}</i><br>
+  <b>Overall Grades:</b> <i>{{(Math + Science + Filipino + English + Tle)/5 }}</i><br>
+  <b>Remarks:</b><i>{{remark}}</i>
+   
+ 
+<br>
+<br>
+<h2>3rd Student Output</h2>
+  <h2>Personal Information</h2>
+  <b>Your name is:</b> <i>{{fname + " " + mname + " " + lname}}</i>
+<br>
+  <h2>Educational Information</h2>
+  <b>Your Strand, Grade Level and School are:</b> <i>{{s +" "+ gl +" "+ sc}}</i>
+  <br>
+    <h2>Grades in Subject</h2>
+  <b>Math:</b>      <i>{{MAth}}</i><br>
+  <b>Science:</b>  <i>{{SCience}}</i>      <br>
+  <b>Filipino:</b>   <i>{{FIlipino}}</i>       <br>
+  <b>English:</b>   <i>{{ENglish}}</i>      <br>
+  <b>TLE:</b>         <i>{{TLe}}      </i>       <br>
+  <b>Grade:</b>     <i>{{selectedName}}</i><br>
+  <b>Your Grades are:</b> <i>{{MAth +" "+ SCience +" "+ FIlipino +" "+ ENglish +" " +TLe}}</i><br>
+  <b>Overall Grades:</b> <i>{{(MAth + SCience + FIlipino + ENglish + TLe)/5 }}</i><br>
+  <b>Remarks:</b><i>{{remarkss}}</i>
+   
   </div>
-
+  
 <script>
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {
 $scope.firstName= "";
+ 
 $scope.middleName="";
+ 
 $scope.lastName= "";
+  
 $scope.strand="";
+  
 $scope.glevel="";
+  
 $scope.school="";
+  
 $scope.math="";
+  
 $scope.science="";
+  
 $scope.filipino="";
+  
 $scope.english="";
+  
 $scope.tle="";
+  
  $scope.names = ["PASSED", "FAILED"]; 
   $scope.names = ["PASSED","FAILED"];
+ 
+  
   
 });
 </script>
